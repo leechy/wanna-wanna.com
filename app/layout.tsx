@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Great_Vibes, Montserrat } from 'next/font/google';
 import './globals.css';
 import styles from '@/components/layout.module.scss';
-import Menu from '@/components/menu';
 
 const greatVibes = Great_Vibes({
   variable: '--font-great-vibes',
@@ -28,7 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={styles.html}>
       <body className={[`${montserrat.variable} ${greatVibes.variable} antialiased`, styles.body].join(' ')}>
-        <Menu />
         {children}
       </body>
     </html>
